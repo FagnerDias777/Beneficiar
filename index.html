@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Beneficiar - Parceiros</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="imagens/beneficiar_logo.png" alt="">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="" class="ativo">Parceiros&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+                    <li><a href="">Empresarial</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+                <button>Solicite seu contato</button>
+            </div>
+        </nav>
+        <div id="chamada">
+            <div>
+                <h1>Mais do que parceiros, verdadeiros amigos do Beneficiar.</h1>
+                <p>Encontre os parceiros mais próximos de você, organizados por categoria, e aproveite todos os
+                    benefícios disponíveis na sua região.</p>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search"
+                    placeholder='Pesquise por temas como "Família", "Benefícios", "Saúde"'>
+                <button class="search-button">PESQUISAR&nbsp;&nbsp<i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <h2>Clínica Parceira</h2>
+        <div class="clinica">
+            <div>
+                <div>
+                    <img src="imagens/logo_clinica.png" alt="">
+                    <h3>CASSIA RODRIGUES - PEDAGOGA E NEUROPSICOLOGIA</h3>
+                </div>
+                <p>Sobre a clínica</p>
+                <div>
+                    <p>CASSIA RODRIGUES - PEDAGOGA E NEUROPSICOLOGIA é uma CLINÍCA em Itapetininga parceiro(a)
+                        credenciado(a) do Cartão Beneficiar, que não é convênio médico ou plano de saúde, mas sim um
+                        cartão de benefícios em consultas médica e odontológica com descontos em exames na cidade de
+                        Itapetininga.</p>
+
+                </div>
+                <div>
+                    <!-- Botão WhatsApp -->
+                    <a href="https://api.whatsapp.com/send?phone=" class="contato">
+                        <i class="fab fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp
+                    </a>
+                    <!-- Botão Telefone -->
+                    <a href="tel:+" class="contatotel">
+                        <i class="fas fa-phone-alt"></i>&nbsp;&nbsp;Telefone
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="imagens/foto_clinica.webp" alt="">
+            </div>
+        </div>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467690.1437770316!2d-46.92494363911909!3d-23.682063582214205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1759967972914!5m2!1spt-BR!2sbr"
+                width="1281" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2>Outros Parceiros</h2>
+        <div class="search-advanced">
+            <div class="select-box">
+                <select id="category" class="select-input">
+                    <option value="" disabled selected>Escolha categoria</option>
+                    <option value="familia">Família</option>
+                    <option value="beneficios">Benefícios</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                </select>
+            </div>
+            <div class="select-box">
+                <select id="subcategory" class="select-input">
+                    <option value="" disabled selected>Subcategoria</option>
+                    <option value="direitos">Direitos</option>
+                    <option value="documentos">Documentos</option>
+                    <option value="ajuda">Ajuda</option>
+                    <option value="informacoes">Informações</option>
+                </select>
+            </div>
+            <div class="search-categoria">
+                <input type="text" class="search"
+                    placeholder='Pesquise por temas como "Família", "Benefícios", "Saúde"'>
+                <button class="search-button">PESQUISAR&nbsp;&nbsp<i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <section id="resultados">
+            <div id="resultados-container" class="clinicas-container">
+                <!-- Aqui os resultados retornados do Backend -->
+                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="resultados-container" class="clinicas-container">
+                <!-- Aqui os resultados retornados do Backend -->
+                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="resultados-container" class="clinicas-container">
+                <!-- Aqui os resultados retornados do Backend -->
+                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                                <div class="clinica-item">
+                    <img src="imagens/logo_clinica_autentica.png" alt="Logo da Clínica">
+                    <div class="clinica-info">
+                        <h3>Domingues e Quina a Fisioterapia Especializada</h3>
+                        <p class="categoria">Saúde</p>
+                        <p class="endereco"><i class="fa-solid fa-location-dot"></i>
+                        &nbsp;
+                        R. Sete de Setembro,312 - Centro - São José dos Campos/SP</p>
+                        <p class="whatsapp"><i class="fab fa-whatsapp"></i>&nbsp;
+                        12 99128-3195</p>
+                        <button class="saiba-mais" onclick="window.location.href='#'">SAIBA MAIS&nbsp;&nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div id="rodape">
+            <div class="beneficiar">
+                <img src="imagens/beneficiar_logo.png" alt="" width="220px" height="62px">
+                <p>Cuidar de si é cuidar de todos</p>
+                <div class="social">
+                    <a href=""><img src="imagens/instagram.png" alt=""></a>
+                    <a href=""><img src="imagens/facebook.png" alt=""></a>
+                    <a href=""><img src="imagens/tiktok.png" alt=""></a>
+                </div>
+            </div>
+            <div class="links">
+                <div>
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="">Perguntas Frequêntes</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+                </div>
+                <div>
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre Nós</a></li>
+                    <li><a href="">Beneficiar Empresarial</a></li>
+                </ul>
+                </div>
+                <div>
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="">Política de Privacidade</a></li>
+                </ul>
+                </div>
+                <div>
+                <h3>Pagamentos</h3>
+                <ul>
+                    <li><a href=""><img src="imagens/logo_mastercard.png" alt=""></a></li>
+                    <li><a href=""><img src="imagens/logo_elo.png" alt=""></a></li>
+                    <li><a href=""><img src="imagens/logo_visa.png" alt=""></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 Beneficiar Cartão. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
