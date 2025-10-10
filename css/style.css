@@ -17,6 +17,31 @@ header {
     background-image: url(../imagens/fundo_beneficiar_header_parceiros_1920.webp);
     background-repeat: no-repeat;
 }
+/* ----------- TABLET (768px–1023px) ----------- */
+@media (max-width: 1024px) {
+  header {
+    padding: 35px 0 0 0;
+    height: 500px;
+    background-image: url(../imagens/fundo_beneficiar_header_parceiros_1024.webp);
+    background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 0 0 0;
+    background-image: url(../imagens/fundo_beneficiar_header_parceiros_768.png);
+    background-size: contain;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    padding: 0 0 0 0;
+    background-image: url(../imagens/fundo_beneficiar_header_parceiros_450.png);
+    background-size: contain;
+  }
+}
 
 /* Menu */
 nav {
@@ -27,6 +52,27 @@ nav {
     margin: 0 auto;
 }
 
+/* ---------- TABLET (768px–1023px) ---------- */
+@media (max-width: 1024px) {
+  nav {
+    width: 85%;
+    height: 80px;
+    border-radius: 40px;
+    padding: 0 30px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+  nav {
+    width: 100%;
+    height: 65px;
+    padding: 0 0px;
+    border-radius: 0px;
+  }
+}
+
+
 nav>div {
     height: 105px;
     display: flex;
@@ -34,12 +80,77 @@ nav>div {
     align-items: center;
     padding: 0 40px;
 }
+.hamburger {
+    display: none;
+}
+/* ---------- TABLET (768px–1023px) ---------- */
+@media (max-width: 1024px) {
+  nav > div {
+    height: 80px;
+    padding: 0 0;
+  }
+}
 
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+  nav > div {
+    height: 65px;
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+}
 nav>div>img {
     width: 170px;
     height: 44px;
 }
 
+/* ---------- TABLET (768px–1023px) ---------- */
+@media (max-width: 1024px) {
+  nav > div > img {
+    width: 140px;
+    height: auto;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+  nav > div > img {
+    width: 120px;
+    height: auto;
+  }
+  .hamburger {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+}
+
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 nav>div>ul {
     margin: 0 auto;
 }
@@ -55,6 +166,20 @@ nav>div>ul>li {
     font-size: 14px;
 }
 
+/* ---------- TABLET (768px–1023px) ---------- */
+@media (max-width: 1024px) {
+  nav > div > ul > li {
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  nav > div > ul {
+    display: none;
+  }
+}
+
 nav>div>ul>li>a {
     text-decoration: none;
     color: #000000;
@@ -68,6 +193,29 @@ nav>div>ul>li>a:hover {
     color: #F87315;
 }
 
+/* Menu Mobile */
+.menu-mobile {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-mobile li {
+  padding: 15px 0;
+  font-weight: 500;
+}
+
+.hamburger.active + .menu-mobile {
+  display: flex;
+}
+
+/* Menu Mobile */
+
 nav>div>button {
     width: 193px;
     height: 42px;
@@ -80,6 +228,30 @@ nav>div>button {
     font-style: normal;
 }
 
+/* ---------- TABLET (1024px) ---------- */
+@media (max-width: 1024px) {
+  nav > div > button {
+    width: 160px;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 40px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+  nav > div > button {
+    width: 140px;
+    height: 36px;
+    font-size: 12px;
+    border-radius: 35px;
+  }
+  .hamburger{
+    font-size: 30px;
+    display: flex;
+}
+}
+
 nav>div>button:hover {
     background-color: #ff6a00;
     cursor: pointer;
@@ -90,6 +262,22 @@ nav>div>button:hover {
     width: 1274px;
     height: 279px;
     margin: 0 auto;
+}
+/* ---------- TABLET (768px–1024px) ---------- */
+@media (max-width: 1024px) {
+  #chamada {
+    width: 85%;
+    height: 220px;
+  }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+  #chamada {
+    width: 90%;
+    height: 180px;
+    padding: 0 10px;
+  }
 }
 
 #chamada>div {
@@ -105,6 +293,35 @@ nav>div>button:hover {
     font-size: 48px;
     line-height: 58px;
 }
+/* ---------- TABLET (768px–1024px) ---------- */
+@media (max-width: 1024px) {
+  #chamada > div {
+    width: 600px;
+  }
+
+  #chamada > div > h1 {
+    margin-top: 30px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+  #chamada > div {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #chamada > div > h1 {
+    margin-top: 25px;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+  }
+}
+
 
 #chamada>div>p {
     font-family: "Figtree", sans-serif;
@@ -116,6 +333,26 @@ nav>div>button:hover {
     max-width: 648px;
     margin: 44px 0 32px 0;
     color: #FFFFFF;
+}
+/* ---------- TABLET (768px–1024px) ---------- */
+@media (max-width: 1024px) {
+  #chamada > div > p {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 500px;
+    margin: 7px 0 10px 0;
+  }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+  #chamada > div > p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 100%;
+    margin: 25px 0 20px 0;
+    text-align: center;
+  }
 }
 
 /* Busca */
@@ -162,7 +399,107 @@ nav>div>button:hover {
 .search-button:hover {
     background-color: #ff6a00;
 }
+/* ---------- TABLET (768px–1024px) ---------- */
+@media (max-width: 1024px) {
+    .search-container {
+        max-width: 85%;
+        height: 50px;
+    }
 
+    .search {
+        height: 50px;
+        font-size: 15px;
+        padding-left: 12px;
+    }
+
+    .search::placeholder {
+        font-size: 16px;
+    }
+
+    .search-button {
+        width: 140px;
+        height: 40px;
+        padding: 4px 15px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+    .search-container {
+        background: none;
+        max-width: 90%;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .search {
+        height: 45px;
+        font-size: 14px;
+        padding-left: 12px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+    }
+
+    .search::placeholder {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .search-button {
+        display: block;
+        margin: 5px auto;
+        width: 30%;
+        height: 45px;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+}
+/* ---------- MOBILE (até 450px) ---------- */
+@media (max-width: 450px) {
+    #chamada > div > h1 {
+        margin-top: 50px;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+  }
+    #chamada > div.search-container {
+        background-color: #FFFFFF;
+        display: flex;
+        height: 45px;
+        padding: 2px;
+    }     
+    .search-container {
+        background: none;
+        max-width: 90%;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .search {
+        height: 45px;
+        font-size: 14px;
+        padding-left: 12px;
+        border-radius: 30px;
+        border: none;
+    }
+
+    .search::placeholder {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .search-button {
+        display: block;
+        margin: 5px auto;
+        width: 40%;
+        height: 45px;
+        border-radius: 30px;
+        font-size: 11px;
+    }
+}
 /* Fim Busca */
 /* Fim Header */
 /* Section */
@@ -189,7 +526,7 @@ section>h2 {
 
 .clinica>div>div>p {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     max-width: 542px;
 }
 
@@ -210,7 +547,7 @@ section>h2 {
 }
 
 .clinica>div>p {
-    margin: 30px 0;
+    margin: 35px 0;
     font-size: 24px;
     font-weight: 600;
 }
