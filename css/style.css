@@ -21,7 +21,7 @@ header {
 @media (max-width: 1024px) {
   header {
     padding: 35px 0 0 0;
-    height: 500px;
+    height: 400px;
     background-image: url(../imagens/fundo_beneficiar_header_parceiros_1024.webp);
     background-size: contain;
   }
@@ -39,7 +39,7 @@ header {
   header {
     padding: 0 0 0 0;
     background-image: url(../imagens/fundo_beneficiar_header_parceiros_450.png);
-    background-size: contain;
+    height: 500px;
   }
 }
 
@@ -350,7 +350,7 @@ nav>div>button:hover {
     font-size: 16px;
     line-height: 24px;
     max-width: 100%;
-    margin: 25px 0 20px 0;
+    margin: 15px 0 20px 0;
     text-align: center;
   }
 }
@@ -360,14 +360,16 @@ nav>div>button:hover {
     display: flex;
     align-items: center;
     border-radius: 50px;
-    max-width: 625px;
+    max-width: px;
     height: 56px;
     background-color: #FFFFFF;
     padding: 0 5px;
 }
 
 .search {
-    width: 100%;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
     height: 56px;
     border: none;
     border-radius: 50px;
@@ -375,6 +377,7 @@ nav>div>button:hover {
     color: rgba(0, 0, 0, 0.5);
     outline: none;
     padding-left: 15px;
+    margin: 0 auto;
 }
 
 .search::placeholder {
@@ -385,7 +388,7 @@ nav>div>button:hover {
 
 .search-button {
     padding: 5px 18px;
-    width: 160px;
+    width: 150px;
     height: 45px;
     background-color: #F87315;
     border: none;
@@ -439,7 +442,7 @@ nav>div>button:hover {
         font-size: 14px;
         padding-left: 12px;
         border-radius: 30px;
-        border: 1px solid #ccc;
+        margin-bottom: 5px;
     }
 
     .search::placeholder {
@@ -449,7 +452,7 @@ nav>div>button:hover {
 
     .search-button {
         display: block;
-        margin: 5px auto;
+        margin: 0 auto;
         width: 30%;
         height: 45px;
         border-radius: 30px;
@@ -508,6 +511,14 @@ section {
     margin: 0 auto;
     font-family: "Figtree", sans-serif;
     width: 1281px;
+    border-radius: 50px;
+}
+/* ---------- TABLET (768px–1024px) ---------- */
+@media (max-width: 1024px) {
+    section {
+        width: 90%;
+        padding: 0 20px;
+    }
 }
 
 section>h2 {
@@ -516,6 +527,21 @@ section>h2 {
     font-size: 48px;
     color: #F87315;
     margin: 70px 0;
+}
+@media (max-width: 1024px) {
+    section > h2 {
+        font-size: 38px;
+        margin: 25px 0;
+        text-align: center;
+    }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+    section {
+        width: 95%;      /* ocupa quase toda a largura */
+        padding: 0 15px;
+    }
 }
 
 .clinica {
@@ -587,6 +613,95 @@ section>h2 {
     margin-right: 8px;
     font-size: 20px;
 }
+
+/* ---------- TABLET (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+    .clinica {
+        gap: 20px;
+        justify-content: space-around;
+    }
+
+    .clinica > div > div > p {
+        font-size: 16px;
+        max-width: 400px;
+    }
+
+    .clinica > div > div > h3 {
+        font-size: 25px;
+    }
+
+    .clinica > div > p {
+        font-size: 20px;
+        margin: 25px 0;
+    }
+
+    .contato,
+    .contatotel {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .contatotel {
+        margin-left: 15px;
+    }
+
+    .clinica > div > div > img {
+        margin-right: 15px;
+    }
+    .foto-clinica {
+        content: url('../imagens/foto_clinica.webp');
+        width: 661px;
+        height: 350px
+    }
+
+}
+
+@media (max-width: 767px) {
+  .clinica > div > p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .clinica > div > div {
+    margin-top: 0;
+  }
+  .clinica > div > div > img {
+    width: 90px;
+    height: auto;
+    margin-right: 15px;
+  }
+  .clinica > div > div > h3 {
+    font-size: 20px;
+  }
+  .foto-clinica {
+      content: url('../imagens/foto_clinica.webp');
+      width: 350px;
+      height: 237px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .clinica {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .clinica > div > div {
+    text-align: left;
+    gap: 10px;
+  }
+  .clinica > div > p {
+    text-align: left;
+  }
+
+  .contatos{
+    justify-content: center;
+  }
+
+}
+
 .mapa {
     margin-top: 70px;
     display: flex;
@@ -596,6 +711,27 @@ section>h2 {
 .mapa iframe {
     border-radius: 20px;
 }
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .mapa {
+        width: 100%;
+    }
+    .mapa iframe {
+        height: 450px; /* reduz um pouco a altura */
+    }
+}
+
+@media (max-width: 767px) {
+    .mapa {
+        width: 100%;
+    }
+    .mapa iframe {
+        width: 100%;
+        height: 300px; /* altura menor para mobile */
+    }
+}
+
 .search-advanced {
     display: flex;
     justify-content: space-around;
@@ -620,7 +756,7 @@ section>h2 {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #fff;
     width: 200px;
 }
@@ -629,15 +765,65 @@ section>h2 {
     outline: none;
 }
 
+/* Ajustes para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .search-advanced {
+      width: 100%;
+    }
+    .search-categoria {
+        height: 50px; /* um pouco menor */
+        border: 1px solid rgb(239, 239, 239); /* borda mais leve */
+    }
+    .select-input {
+        font-size: 13px; /* ajustar texto */
+        width: 100%;
+        margin: 0 5px;
+    }
+    .search-button{
+      width: 160px;
+    }
+}
+
 #resultados-container {
+  flex-wrap: wrap;
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #resultados-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+/* ---------- MOBILE (até 767px) ---------- */
+@media (max-width: 767px) {
+  .search-advanced {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  #resultados-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .search-categoria{
+    width: 80%;
+    border: 1px solid #ddd;
+  }
+}
+
 .clinica-item {
     position: relative;
-    width: 382px;
-    height: 366px;
+    width: 370px;
+    height: 360px;
+    padding: 10px;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 .categoria {
     font-family: "Manrope", sans-serif;
@@ -706,7 +892,7 @@ section>h2 {
     color: #FFFFFF;
 }
 footer{
-    width: 1920px;
+    width: 100%
 }
 footer>div{
     display: block;
@@ -767,4 +953,62 @@ footer>p{
     background-color: #61BB5A;
     color: #FFFFFF;
     text-align: center;
+}
+/* ---------- TABLET (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+    footer {
+      width: 100%;
+    }
+    #rodape {
+        align-items: flex-start;
+    }
+    #rodape > div > img {
+        width: 140px;
+        height: auto;
+    }
+    .beneficiar > p{
+      width: 150px;
+    }
+    .social{
+      width: 150px;
+      justify-content: space-between;
+    }
+    .social > a > img{
+      width: 40px;
+      height: auto;
+    }
+    footer > div {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 30px;
+    }
+    .links div h3{
+        font-size: 18px;
+    }
+
+    .links div ul li {
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+    .links div ul li a img{
+      width: 60px;
+      height: auto;
+    }
+
+    .beneficiar p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 767px){
+  #rodape{ 
+    gap: 20px;
+  }
+  .beneficiar{
+
+  }
 }
